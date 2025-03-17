@@ -2,8 +2,6 @@ from bank import Bank
 import time
 import sys
 
-
-
 def main():
     while True:
         bank_name = "The Bank"
@@ -27,8 +25,7 @@ def main():
             name = input("Name: ")
             account_number = input("Account Number: ")
             
-            user = Bank.authenticate(name, account_number)
-            if user:
+            if Bank.authenticate(name, account_number):
                 time.sleep(3)
                 print(f"Welcome to {bank_name}")
                 bank_menu(account_number)
@@ -109,11 +106,7 @@ def bank_menu(account_number):
             
             
         elif option == "x":
-            sys.exit() 
-
-       
-
-    
+            sys.exit()     
 
 
 if __name__ == "__main__":
